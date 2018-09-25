@@ -1,0 +1,11 @@
+# Supfile
+
+networks:
+    default:
+        hosts:
+            - xxxx@xxx.xxx.xxx.xxx
+commands:
+    install:
+        run: cd ~/server/ && GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git pull origin master && ~/server/prepare.sh
+    update:
+        run: ~/server/server_run.sh
